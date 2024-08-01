@@ -4,7 +4,7 @@ Welcome to my personal portfolio! I'm Karthik Krishna, a passionate student with
 
 ## About Me
 
-I am a 3rd year student pursuing my M. Sc at Coimbatore Institute of Technology. My journey in Decision and Computing Sciences has equipped me with valuable skills in C, Python, Java, SQL, Machine Learning, Data Visualization, Statistics.
+I am a 4th year student pursuing my M. Sc at Coimbatore Institute of Technology. My journey in Decision and Computing Sciences has equipped me with valuable skills in C, Python, Java, SQL, Machine Learning, Data Visualization, Statistics.
 
 ## Contact
 
