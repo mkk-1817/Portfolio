@@ -125,9 +125,9 @@ export function Project() {
                 <a href="" target="_blank" rel="noreferrer">
                   <img src={githubIcon} alt="Visit site" />
                 </a>
-                <a href="https://youtu.be/NOm-3MynPLE" target="_blank" rel="noreferrer">
+                {/* <a href="https://youtu.be/NOm-3MynPLE" target="_blank" rel="noreferrer">
                   <img src={externalLink} alt="Visit site" />
-                </a>
+                </a> */}
               </div>
             </header>
             <div className="body">
