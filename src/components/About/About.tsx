@@ -1,5 +1,5 @@
 import { Container } from "./styles";
-import KarthikKrishna from "../../assets/KarthikKrishna2.jpg";
+import KarthikKrishna from "../../assets/KarthikKrishnaFinal.png";
 import python from "../../assets/python.svg"
 import java from "../../assets/java.svg"
 import wordpress from "../../assets/wordpress.svg";
