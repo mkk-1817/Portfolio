@@ -2,60 +2,58 @@ import styled from "styled-components";
 
 
 export const Container = styled.footer`
-  background-color: #2b2b2b;
-  padding: 1rem 15rem;
+  background-color: var(--glass);
+  padding: 2.5rem 10rem;
   margin-top: 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  border-top: 1px solid var(--glass-border);
 
   .logo{
-    font-size: 2.8rem;
+    font-size: 2.4rem;
+    font-family: 'Outfit', sans-serif;
   }
 
   p{
-    letter-spacing: 0.2rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.8rem;
+    color: var(--text-secondary);
+    font-size: 1.4rem;
+    
     img{
-      width: 2.6rem;
+      width: 2rem;
       animation: spinning 5s infinite linear;
     }
   }
+
   .social-media{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
 
-    img,span{
-      font-size: 3rem;
-      width: 3rem;
+    img{
+      width: 2.7rem;
+      transition: var(--transition);
+      opacity: 0.7;
+      
+      &:hover {
+        opacity: 1;
+        transform: translateY(-5px);
+      }
     }
   }
 
-
   @keyframes spinning {
-    0%{
-      transform: rotate(0);
-    }
-    100%{
-      transform: rotate(360deg);
-    }
+    0%{ transform: rotate(0); }
+    100%{ transform: rotate(360deg); }
   }
 
   @media(max-width: 800px){
-    padding: 4rem 10rem;
+    padding: 6rem 3rem;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
     text-align: center;
-  }
-  @media(max-width: 600px){
-    padding: 4rem 1rem;
-    p{
-      font-size: 1.2rem;
-    }
   }
 `

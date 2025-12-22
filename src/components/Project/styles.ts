@@ -7,8 +7,10 @@ export const Container = styled.section`
   h2{
     text-align: center;
     font-size: 4rem;
-    margin-bottom: 3rem;
+    margin-bottom: 10rem;
+    font-family: 'Instrument Sans', sans-serif;
   }
+
   .projects{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -19,49 +21,90 @@ export const Container = styled.section`
 
     .project{
       padding: 2rem 1.8rem;
-      background-color: #2b2b2b;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow);
+      backdrop-filter: var(--backdrop-blur);
       border-radius: 1.2rem;
-      transition: 0.25s;
+      transition: var(--transition);
       display: flex;
       flex-direction: column;
       height: 100%;
-      color: #FFF;
+      color: var(--text-primary);
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--accent), var(--secondary));
+        opacity: 0;
+        transition: var(--transition);
+      }
+
       &:hover{
         transform: translateY(-5px);
-        background-color: var(--pink);
+        background: var(--glass-hover);
+        border-color: var(--secondary);
+        
+        &::before {
+          opacity: 1;
+        }
+
+        header {
+          svg {
+            stroke: var(--secondary);
+          }
+        }
       }
 
       header{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        color: var(--blue);
+        color: var(--text-secondary);
         margin-bottom: 3.6rem;
+        transition: var(--transition);
+
+        svg {
+          transition: var(--transition);
+        }
+
         .project-links{
           display: flex;
           align-items: center;
           gap: 1rem;
-        }
-        a > img {
-          width: 5.0rem;
+
+          a > img {
+            width: 3rem;
+            // filter: brightness(0) invert(1);
+            transition: var(--transition);
+            &:hover {
+              transform: translateY(-4px);
+            }
+          }
         }
       }
       
       h3{
+        font-size: 2rem;
         margin-bottom: 2rem;
+        font-family: 'Instrument Sans', sans-serif;
+        color: var(--text-primary);
       }
 
       p{
         letter-spacing: 0.12rem;
         margin-bottom: 2rem;
-        a{
-          color: #FFFF;
-          border-bottom: 1px solid var(--green);
-          transition: color 0.25s;
-          &:hover{
-            color: var(--green);
-          }
-        }
+        font-family: 'Instrument Sans', sans-serif;
+        color: var(--text-primary);
+        line-height: 2.25rem;
+        // height: 160px;
+        // overflow-y: auto;
       }
 
       footer{
@@ -69,9 +112,10 @@ export const Container = styled.section`
         .tech-list{
           display: flex;
           align-items: center;
-          gap: 2rem;
+          gap: 1rem;
           font-size: 1.4rem;
           opacity: 0.6;
+          color: var(--text-primary);
         }
       }
 

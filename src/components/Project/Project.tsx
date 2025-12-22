@@ -6,175 +6,104 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 
 export function Project() {
+
+  const projects = [
+    {
+      title: "Digital Land Registry Application",
+      description: "Developed a secure full-stack Digital Land Registry web application featuring user authentication, admin verification, real-time auctions, and algorithmic enhancements—including Greedy, Dynamic Programming, and Divide & Conquer—for optimized performance, alongside HMAC-SHA256-based document integrity and ownership security.",
+      tech: ["Python", "MongoDB", "Flask"],
+      github: "https://github.com/mkk-1817/digital-land-registry",
+      link: "",
+      icon: "folder"
+    },
+    {
+      title: "Fitness Training Studio Application",
+      description: "The Fitness Training Studio application is a comprehensive web-based platform designed to cater to the fitness needs of modern individuals by providing personalized diet and workout plans. Built using the MEAN stack (MongoDB, Express.js, Angular, and Node.js), this application allows users to register, manage their profiles, and access customized fitness plans.",
+      tech: ["Angular", "MongoDB", "ExpressJs", "NodeJs"],
+      github: "https://github.com/mkk-1817/MEAN-Stack-Fitness-App",
+      link: "",
+      icon: "folder"
+    },
+    {
+      title: "Online Voting Portal Application",
+      description: "Developed a secure and accessible Online Voting Portal with multi-factor authentication, anonymous voting, and collaborative GitHub-based development, enhancing democratic participation and ensuring user confidentiality, data protection, and project transparency.",
+      tech: ["React", "Node.js", "ExpressJs", "MongoDB"],
+      github: "https://github.com/mkk-1817/Online-Voting-Portal",
+      link: "https://online-voting-portal.netlify.app/",
+      icon: "folder"
+    },
+    {
+      title: "Netflix - Clone",
+      description: "This project is a frontend clone of Netflix, built using pure HTML, CSS, and JavaScript, simulating the UI and user experience of the popular streaming platform. The static web application is containerized using Docker and deployed on Google Kubernetes Engine (GKE) for scalable and resilient cloud hosting.",
+      tech: ["HTML", "GKE", "Docker"],
+      github: "https://github.com/mkk-1817/Netflix-clone",
+      link: "",
+      icon: "folder"
+    },
+    {
+      title: "HR Analytics",
+      description: "A comprehensive HR Analytics project leveraging Excel, Python (EDA), and Power BI to uncover insights and drive data-informed talent management strategies.",
+      tech: ["Python", "Excel", "Power BI"],
+      github: "https://github.com/mkk-1817/HR-Analytics",
+      link: "",
+      icon: "code"
+    },
+    {
+      title: "Youtube Comments Analysis",
+      description: "This web application built with Flask analyzes comments from a YouTube video. It extracts comments using the YouTube Data API, performs sentiment analysis on them, generates a word cloud, and calculates precision and recall metrics.",
+      tech: ["Flask", "Python", "Youtube API"],
+      github: "https://github.com/mkk-1817/Youtube-Comments-Sentiment-Analysis",
+      link: "",
+      icon: "folder"
+    }
+  ]
+
   return (
     <Container id="project">
       <h2>My Projects</h2>
       <div className="projects">
 
-        <ScrollAnimation animateIn="flipInX">
-          <div className="project">
-            <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                <title>Folder</title>
-                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-              </svg>
-              <div className="project-links">
-                <a href="https://github.com/mkk-1817/digital-land-registry" target="_blank" rel="noreferrer">
-                  <img src={githubIcon} alt="GitHub" />
-                </a>
-              </div>
-            </header>
-            <div className="body">
-              <h3>Digital Land Registry Application</h3>
-              <p>
-                Developed a secure full-stack Digital Land Registry web application featuring user authentication, admin verification, real-time auctions, and algorithmic enhancements—including Greedy, Dynamic Programming, and Divide & Conquer—for optimized performance, alongside HMAC-SHA256-based document integrity and ownership security.
-              </p>
-            </div>
-            <footer>
-              <ul className="tech-list">
-                <li>Python</li>
-                <li>MongoDB</li>
-                <li>Flask</li>
-              </ul>
-            </footer>
-          </div>
-        </ScrollAnimation>
-      <ScrollAnimation animateIn="flipInX">
-          <div className="project">
-            <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b " stroke-width="1" stroke-linecap="round" stroke-linejoin="round" ><title>Folder</title><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-              <div className="project-links">
-                <a href="https://github.com/mkk-1817/MEAN-Stack-Fitness-App" target="_blank" rel="noreferrer">
-                  <img src={githubIcon} alt="Visit site" />
-                </a>
-              </div>
-            </header>
-            <div className="body">
-              <h3>Fitness Training Studio Application</h3>
-              <p>The Fitness Training Studio application is a comprehensive web-based platform designed to cater to the fitness needs of modern individuals by providing personalized diet and workout plans. Built using the MEAN stack (MongoDB, Express.js, Angular, and Node.js), this application allows users to register, manage their profiles, and access customized fitness plans. The system also includes an administrative interface for managing user data and updating fitness plans.</p>
-            </div>
-            <footer>
-              <ul className="tech-list">
-                <li>Angular</li>
-                <li>MongoDB</li>
-                <li>ExpressJs</li>
-                <li>NodeJs</li>
-              </ul>
-            </footer>
-          </div>
-        </ScrollAnimation>
-
-        
-
-        <ScrollAnimation animateIn="flipInX">
-          <div className="project">
-            <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b " strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><title>Folder</title> <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path> </svg>
-              <div className="project-links">
-                <a href="https://github.com/mkk-1817/Online-Voting-Portal" target="_blank" rel="noreferrer">
-                  <img src={githubIcon} alt="Visit site" /> </a>
-                <a href="https://online-voting-portal.netlify.app/" target="_blank" rel="noreferrer">
-                  <img src={externalLink} alt="Visit site" /></a>
-              </div>
-            </header>
-            <div className="body">
-              <h3>Online Voting Portal Application</h3>
-              <p>
-               Developed a secure and accessible Online Voting Portal with multi-factor authentication, anonymous voting, and collaborative GitHub-based development, enhancing democratic participation and ensuring user confidentiality, data protection, and project transparency.
-              </p>
-            </div>
-            <footer>
-              <ul className="tech-list">
-                <li>React</li>
-                <li>Node.js</li>
-                <li>ExpressJs</li>
-                <li>MongoDB</li>
-              </ul>
-            </footer>
-          </div>
-        </ScrollAnimation>
-
-<ScrollAnimation animateIn="flipInX">
-          <div className="project">
-            <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"> <title>Folder</title> <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path> </svg>
-              <div className="project-links">
-                <a href="https://github.com/mkk-1817/Netflix-clone" target="_blank" rel="noreferrer">
-                  <img src={githubIcon} alt="Visit site" /></a>
-                {/* <a href="https://vote.vinayaksingh.com" target="_blank" rel="noreferrer">
-                  <img src={externalLink} alt="Visit site" />
-                </a>  */}
+        {projects.map((project, index) => (
+          /* @ts-ignore */
+          <ScrollAnimation animateIn="fadeInUp" key={index}>
+            <div className="project">
+              <header>
+                <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                  <title>{project.icon === 'code' ? 'Code' : 'Folder'}</title>
+                  {project.icon === 'code' ? (
+                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    // <polyline points="16 18 22 12 16 6"></polyline>
+                    // <polyline points="8 6 2 12 8 18"></polyline>
+                  ) : (
+                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                  )}
+                </svg>
+                <div className="project-links">
+                  <a href={project.github} target="_blank" rel="noreferrer">
+                    <img src={githubIcon} alt="Visit site" />
+                  </a>
+                  {project.link && (
+                    <a href={project.link} target="_blank" rel="noreferrer">
+                      <img src={externalLink} alt="Visit site" />
+                    </a>
+                  )}
                 </div>
-            </header>
-            <div className="body">
-              <h3>Netflix - Clone</h3>
-              <p>This project is a frontend clone of Netflix, built using pure HTML, CSS, and JavaScript, simulating the UI and user experience of the popular streaming platform. The static web application is containerized using Docker and deployed on Google Kubernetes Engine (GKE) for scalable and resilient cloud hosting.</p>
-            </div>
-            <footer> <ul className="tech-list"> <li>HTML</li> <li>GKE</li> <li>Docker</li> </ul> </footer>
-          </div>
-        </ScrollAnimation>
-  
-        <ScrollAnimation animateIn="flipInX">
-          <div className="project">
-            <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                <title>Code</title>
-                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-              </svg>
-              <div className="project-links">
-                <a href="https://github.com/mkk-1817/HR-Analytics" target="_blank" rel="noreferrer">
-                  <img src={githubIcon} alt="Visit site" />
-                </a>
-                {/* <a href="https://youtu.be/NOm-3MynPLE" target="_blank" rel="noreferrer">
-                  <img src={externalLink} alt="Visit site" />
-                </a> */}
+              </header>
+              <div className="body">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
               </div>
-            </header>
-            <div className="body">
-              <h3>HR Analytics</h3>
-              <p>A comprehensive HR Analytics project leveraging Excel, Python (EDA), and Power BI to uncover insights and drive data-informed talent management strategies.</p>
+              <footer>
+                <ul className="tech-list">
+                  {project.tech.map((tech) => (
+                    <li key={tech}>{tech}</li>
+                  ))}
+                </ul>
+              </footer>
             </div>
-            <footer>
-              <ul className="tech-list">
-                <li>Python</li>
-                <li>Excel</li>
-                <li>Power BI</li>
-              </ul>
-            </footer>
-          </div>
-        </ScrollAnimation>
+          </ScrollAnimation>
+        ))}
 
-        <ScrollAnimation animateIn="flipInX">
-          <div className="project">
-            <header>
-              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                <title>Folder</title>
-                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-              </svg>
-              <div className="project-links">
-                <a href="https://github.com/mkk-1817/Youtube-Comments-Sentiment-Analysis" target="\_blank" rel="noreferrer">
-                  <img src={githubIcon} alt="Visit site" />
-                </a>
-              </div>
-            </header>
-            <div className="body">
-              <h3>Youtube Comments Analysis</h3>
-              <p>
-                This web application built with Flask analyzes comments from a YouTube video. It extracts comments using the YouTube Data API, performs sentiment analysis on them, generates a word cloud, and calculates precision and recall metrics.
-              </p>
-            </div>
-            <footer>
-              <ul className="tech-list">
-                <li>Flask</li>
-                <li>Python</li>
-                <li>Youtube API</li>
-              </ul>
-            </footer>
-          </div>
-        </ScrollAnimation>
-
-        
-      
       </div>
     </Container>
   );

@@ -4,6 +4,8 @@ import { Hero } from "../Hero/Hero";
 import { About } from "../About/About";
 import { Contact } from "../Contact/Contact";
 import { Project } from "../Project/Project";
+import { Experience } from "../Experience/Experience";
+import { Skills } from "../Skills/Skills";
 import python from "../../assets/python.svg"
 import java from "../../assets/java.svg"
 import wordpress from "../../assets/wordpress.svg";
@@ -21,6 +23,7 @@ import boostrapIcon from "../../assets/bootstrap-icon.svg";
 export function Main() {
   return (
     <Container>
+      {/* @ts-ignore */}
       <Particles
         id="tsparticles"
         options={{
@@ -264,6 +267,8 @@ export function Main() {
       />
       <Hero></Hero>
       <About></About>
+      <Experience></Experience>
+      <Skills></Skills>
       <Project></Project>
       <Contact></Contact>
     </Container>

@@ -9,13 +9,7 @@ import instagramIcon from '../../assets/instagram.svg'
 export function Footer() {
   return (
     <Container className="footer">
-      
-      <div>
-        <p>
-          This Website was made with <img src={reactIcon} alt="React" />
-          {/* <span>❤️</span> */}
-        </p>
-      </div>
+
       <div className="social-media">
         <a
           href="https://www.linkedin.com/in/karthik-krishna-m/"
@@ -39,7 +33,7 @@ export function Footer() {
           <img src={whatsapp} alt="Whatsapp" />
         </a>
         <a
-          href="https://www.instagram.com/life.of.karthii"
+          href="https://www.instagram.com/_karthi18_"
           target="_blank"
           rel="noreferrer"
         >

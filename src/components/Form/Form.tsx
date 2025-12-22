@@ -72,6 +72,7 @@ export function Form() {
           field="message"
           errors={state.errors}
         />
+        {/* @ts-ignore */}
         <ReCAPTCHA
           sitekey="6Lfj9NYfAAAAAP8wPLtzrsSZeACIcGgwuEIRvbSg"
           onChange={(e) => {
