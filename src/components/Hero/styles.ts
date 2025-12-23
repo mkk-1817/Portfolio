@@ -122,11 +122,12 @@ export const Container = styled.section`
 
   .hero-image{
     img{
-      max-width: 500px;
-      filter: grayscale(0.5);
+      max-width: 600px;
+      border-radius: 2rem;
+      box-shadow: 0 10px 50px rgba(0,0,0,0.5);
       transition: var(--transition);
       &:hover {
-        filter: grayscale(0);
+        transform: scale(1.02);
       }
     }
   }
