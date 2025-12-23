@@ -58,6 +58,15 @@ export const Container = styled.section`
       margin-bottom: 4rem;
       animation: fadeInUp 1s ease 0.6s backwards;
     }
+
+    p.description {
+      font-size: 1.8rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 3rem;
+      max-width: 50rem;
+      animation: fadeInUp 1s ease 0.5s backwards;
+    }
     
     .button {
        gap: 1rem;

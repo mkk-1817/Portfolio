@@ -7,6 +7,15 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 export function Project() {
 
+  const workingOn = {
+    title: "SkillSync AI: Precision Hiring Powered by AI",
+    description: "RAG-powered framework processing 50+ resumes/minute with 95% parsing accuracy, reducing manual screening time by 70%. Implemented a scalable full-stack architecture using Next.js and FastAPI, leveraging Google Vertex AI for advanced semantic search and Firestore for real-time candidate data management.",
+    tech: ["NextJs", "Python FastAPI", "Google Firestore", "Google Cloud Storage", "Google Vertex AI"],
+    github: "https://github.com/mkk-1817/skill-sync-ai",
+    link: "",
+    icon: "code"
+  }
+
   const projects = [
     {
       title: "Digital Land Registry Application",
@@ -61,6 +70,46 @@ export function Project() {
   return (
     <Container id="project">
       <h2>My Projects</h2>
+
+      {/* Featured Project */}
+      {/* @ts-ignore */}
+      <ScrollAnimation animateIn="fadeInUp">
+        <div className="working-on">
+          <div className="label">Currently Working on</div>
+          <div className="project-content">
+            <header>
+              <svg width="50" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="#23ce6b" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                <title>Code</title>
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <div className="project-links">
+                {workingOn.github && (
+                  <a href={workingOn.github} target="_blank" rel="noreferrer">
+                    <img src={githubIcon} alt="Visit site" />
+                  </a>
+                )}
+                {workingOn.link && (
+                  <a href={workingOn.link} target="_blank" rel="noreferrer">
+                    <img src={externalLink} alt="Visit site" />
+                  </a>
+                )}
+              </div>
+            </header>
+            <div className="body">
+              <h3>{workingOn.title}</h3>
+              <p>{workingOn.description}</p>
+            </div>
+            <footer>
+              <ul className="tech-list">
+                {workingOn.tech.map((tech) => (
+                  <li key={tech}>{tech}</li>
+                ))}
+              </ul>
+            </footer>
+          </div>
+        </div>
+      </ScrollAnimation>
+
       <div className="projects">
 
         {projects.map((project, index) => (

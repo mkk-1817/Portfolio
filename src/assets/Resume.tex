@@ -1,0 +1,180 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+    \textbf{\Huge \scshape Karthik Krishna M} \\ \vspace{1pt}
+    \small +91 9092723034 $|$ \href{mailto:karthikkrishna230104@gmail.com}{\underline{karthikkrishna230104@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/karthik-krishna-m}{\underline{linkedin.com/in/karthik-krishna-m}} $|$
+    \href{https://github.com/mkk-1817}{\underline{github.com/mkk-1817}}
+\end{center}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Project Management Intern}{Present}
+      {Prediscan MedTech}{Remote}
+      \resumeItemListStart
+        \resumeItem{Coordinated a cross-functional team of 5+ members, ensuring delivery of 3 projects.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Full-Stack Developer \& Data Scientist Intern}{December 2024 -- November 2025}
+      {Prediscan MedTech}{Remote}
+      \resumeItemListStart
+        \resumeItem{Created interactive prototype dashboards using Streamlit, reducing demo preparation time by 40\% and facilitating 15+ client presentations.}
+        \resumeItem{Optimized public-facing website with React and Vite, improving lighthouse performance score by 25 points and reducing load time by 1.5s.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Product Engineer Intern}{July 2024 -- December 2024}
+      {Smartail Pvt Ltd}{Chennai, India}
+      \resumeItemListStart
+        \resumeItem{Refactored 1000+ lines of legacy Java code, improving code maintainability and reducing technical debt by 30\%.}
+        \resumeItem{Optimized RESTful APIs, reducing response times by up to 35\%, significantly improving the performance of the Deepgrade Status Tracker.}
+        \resumeItem{Enhanced UI usability for 500+ active users, resulting in a 20\% increase in user engagement metrics.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+    \resumeSubheading
+          {SkillSync AI: Precision Hiring Powered by AI}{}
+          {Tools Used: NextJs, Python FastAPI, Google Firestore, Google Cloud Storage, Google Vertex AI}{}
+          \resumeItemListStart
+            \resumeItem{RAG-powered framework processing 50+ resumes/minute with 95\% parsing accuracy, reducing manual screening time by 70\%.}
+            \resumeItem{Implemented a scalable full-stack architecture using Next.js and FastAPI, leveraging Google Vertex AI for advanced semantic search and Firestore for real-time candidate data management.}
+          \resumeItemListEnd
+      \resumeSubheading
+          {Digital Land Registry Application}{}
+          {Tools Used: Flask, MongoDB}{}
+          \resumeItemListStart
+            \resumeItem{Developed a full-stack Digital Land Registry web application, implementing secure property management with user authentication, admin verification workflows, and real-time auction systems with automated completion scheduling.}
+            \resumeItem{Integrated Divide \& Conquer algorithms to search 10,000+ property records, improving query performance by 40\%.}
+          \resumeItemListEnd
+      
+    \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Coimbatore Institute of Technology}{Coimbatore, India}
+      {M.Sc Decision and Computing Sciences, CGPA: 8.56}{2021 -- Present}
+      % \resumeItemListStart
+      %   \resumeItem{CGPA: 8.56}
+      % \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Frontend}{: React, Next.js, Angular, TypeScript, JavaScript, HTML, CSS, Bootstrap, Tailwind} \\
+     \textbf{Backend}{: Node.js, Python, FastAPI, Flask, Java} \\
+     \textbf{Data Science \& AI}{: Python, Gen AI} \\
+     \textbf{Cloud \& Infrastructure}{: AWS, GCP} \\
+     \textbf{Databases}{: MongoDB, MySQL} \\
+     \textbf{Developer Tools}{: Visual Studio Code, Git, GitHub, Docker} \\
+     \textbf{Soft Skills}{: Flexed, Collaborated, Scheduled efficiently, Coordinated tasks}
+    }}
+ \end{itemize}
+
+
+%-----------LEADERSHIP & ACTIVITIES-----------
+\section{Leadership \& Activities}
+  \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Placement Coordinator}}{2025 -- Present}
+          \resumeItemListStart
+            \item[] \small{Facilitated communication between corporate recruiters and the department, ensuring seamless execution of placement drives.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Activities}}{}
+          \resumeItemListStart
+            \resumeItem{\textbf{Pragyan 23, National Institute of Technology, Trichy, 2023}}: {Grant Thornton Lean Six Sigma Yellow Belt - Grant Thornton}
+            \resumeItem{\textbf{Hyperverge \& SenseAI Hackathon, 2025}}: {Achieved Top 10 Finalist at the SensAI @ CIT x HyperVerge Hackathon by developing a real-time multilingual AI feedback system with native-script and phonetic transliteration support.}
+            \resumeItem{\textbf{redBus Data Decode Hackathon}}: {Selected participant in the redBus Data Decode Hackathon 2025, developing Python-based models to forecast bus journey demand 15 days in advance using real-world booking and search data.}
+          \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  
+%-----------INTERESTS-----------
+\section{Interests}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     Full Stack Development, Web Development, DBMS, Data Structures, Logical Coding, Aptitude Solving
+    }}
+ \end{itemize}
+
+\end{document}

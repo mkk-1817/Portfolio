@@ -16,6 +16,9 @@ export function Hero() {
         <p>Hello <img src={Hello} alt="Hello" width="20px" />, I'm</p>
         <h1>Karthik Krishna M</h1>
         <h3>Full Stack Developer | Data Scientist</h3>
+        <p className="description">
+          Full Stack Developer & Data Scientist with expertise in building scalable web applications and AI-driven solutions. Passionate about solving complex problems through clean code and innovative technologies.
+        </p>
         <p className="small-resume">1 Year of Experience</p>
         <div className="cta-wrapper">
           <BrowserRouter>

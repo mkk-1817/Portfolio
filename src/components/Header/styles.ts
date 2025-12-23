@@ -114,6 +114,7 @@ export const Container = styled.header`
     display: flex;
     align-items: center;
     justify-content: center;
+    justify-content: center;
     margin-right: 2rem;
     color: var(--text-secondary);
     transition: var(--transition);
@@ -145,6 +146,13 @@ export const Container = styled.header`
       display: none;
     }
   }
+  
+  /* Hide Inner Theme Toggle on Desktop */
+  nav .theme-toggle {
+    display: none;
+  }
+  
+
 
   /* Resume Icon Button */
   .resume-icon-btn {
@@ -166,6 +174,11 @@ export const Container = styled.header`
     }
   }
 
+  /* Hide Outer Resume Button on Desktop (Moved here for specificity/override) */
+  & > .resume-icon-btn {
+    display: none;
+  }
+
   @media (max-width: 960px) {
     top: 0;
     left: 0;
@@ -177,6 +190,17 @@ export const Container = styled.header`
     justify-content: space-between;
     padding: 2rem 3rem;
     background: rgba(11, 11, 11, 0.8);
+
+    /* Hide Desktop Theme Toggle on Mobile */
+    /* & > .theme-toggle {
+      display: none;
+    } Removed this to show it on mobile */
+    
+    /* Show Outer Buttons on Mobile */
+    & > .theme-toggle,
+    & > .resume-icon-btn {
+      display: flex;
+    }
 
     .logo {
       display: block;
@@ -207,6 +231,11 @@ export const Container = styled.header`
         visibility: visible;
         transform: translateY(0);
       }
+
+      /* Show Inner Theme Toggle on Mobile - REMOVED (Now outside) */
+      .theme-toggle, .resume-icon-btn {
+        display: none;
+      }
     }
   }
   }
@@ -216,7 +245,7 @@ export const Container = styled.header`
     position: fixed;
     top: 0;
     left: 0;
-    width: 50vw;
+    width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(5px);

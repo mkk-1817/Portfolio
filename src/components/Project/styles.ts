@@ -11,6 +11,77 @@ export const Container = styled.section`
     font-family: 'Instrument Sans', sans-serif;
   }
 
+  .working-on {
+     background: var(--glass);
+     border: 2px solid var(--secondary); /* Highlight border */
+     box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+     backdrop-filter: var(--backdrop-blur);
+     border-radius: 2rem;
+     padding: 3rem;
+     margin-bottom: 5rem;
+     position: relative;
+     overflow: hidden;
+     transition: var(--transition);
+
+     &:hover {
+        box-shadow: 0 0 30px rgba(59, 130, 246, 0.25);
+        transform: translateY(-5px);
+     }
+
+     .label {
+        background: var(--secondary);
+        color: white;
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        border-radius: 2rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        font-family: 'Instrument Sans', sans-serif;
+     }
+
+     .project-content {
+        .body h3 {
+           font-size: 2.8rem;
+           margin-bottom: 1.5rem;
+           color: var(--accent);
+        }
+        
+        .body p {
+           font-size: 1.8rem;
+           line-height: 1.6;
+           max-width: 800px;
+        }
+
+        header {
+           display: flex;
+           justify-content: space-between;
+           margin-bottom: 2rem;
+           
+           .project-links {
+              display: flex;
+              gap: 1.5rem;
+              img { width: 3.5rem; }
+           }
+        }
+
+        footer {
+           margin-top: 2rem;
+           .tech-list {
+              display: flex;
+              gap: 1.5rem;
+              flex-wrap: wrap;
+              li {
+                 font-size: 1.5rem;
+                 background: rgba(255,255,255,0.05);
+                 padding: 0.5rem 1rem;
+                 border-radius: 0.5rem;
+              }
+           }
+        }
+     }
+  }
+
   .projects{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -111,11 +182,17 @@ export const Container = styled.section`
         margin-top: auto;
         .tech-list{
           display: flex;
-          align-items: center;
+          flex-wrap: wrap;
           gap: 1rem;
           font-size: 1.4rem;
-          opacity: 0.6;
+          opacity: 0.9;
           color: var(--text-primary);
+          
+          li {
+            background: rgba(255,255,255,0.05);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+          }
         }
       }
 

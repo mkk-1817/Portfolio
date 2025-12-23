@@ -31,7 +31,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['#home', '#about', '#skills', '#experience', '#project', '#contact']
+      const sections = ['#home', '#about', '#experience', '#skills', '#project', '#contact']
       const scrollPosition = window.scrollY + 200 // Offset for better UX
 
       for (const section of sections) {
@@ -50,8 +50,9 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  function closeMenu() {
+  function handleNavClick(hash: string) {
     setActive(false)
+    setActiveNav(hash)
   }
 
   const [showResume, setShowResume] = useState(false)
@@ -75,6 +76,18 @@ export function Header() {
           <span>{" Krishna"}</span>
         </HashLink>
 
+
+
+        <button className="resume-icon-btn" onClick={() => setShowResume(true)} aria-label="View Resume">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M14 2V8H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M16 13H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M16 17H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M10 9H9H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+
         <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle theme">
           <svg className="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2" />
@@ -86,22 +99,22 @@ export function Header() {
         </button>
 
         <nav className={isActive ? 'active' : ''}>
-          <NavHashLink smooth to="#home" onClick={closeMenu} className={activeNav === '#home' ? 'active' : ''}>
+          <NavHashLink smooth to="#home" onClick={() => handleNavClick('#home')} className={activeNav === '#home' ? 'active' : ''}>
             Home
           </NavHashLink>
-          <NavHashLink smooth to="#about" onClick={closeMenu} className={activeNav === '#about' ? 'active' : ''}>
+          <NavHashLink smooth to="#about" onClick={() => handleNavClick('#about')} className={activeNav === '#about' ? 'active' : ''}>
             About
           </NavHashLink>
-          <NavHashLink smooth to="#skills" onClick={closeMenu} className={activeNav === '#skills' ? 'active' : ''}>
-            Skills
-          </NavHashLink>
-          <NavHashLink smooth to="#experience" onClick={closeMenu} className={activeNav === '#experience' ? 'active' : ''}>
+          <NavHashLink smooth to="#experience" onClick={() => handleNavClick('#experience')} className={activeNav === '#experience' ? 'active' : ''}>
             Experience
           </NavHashLink>
-          <NavHashLink smooth to="#project" onClick={closeMenu} className={activeNav === '#project' ? 'active' : ''}>
+          <NavHashLink smooth to="#skills" onClick={() => handleNavClick('#skills')} className={activeNav === '#skills' ? 'active' : ''}>
+            Skills
+          </NavHashLink>
+          <NavHashLink smooth to="#project" onClick={() => handleNavClick('#project')} className={activeNav === '#project' ? 'active' : ''}>
             Projects
           </NavHashLink>
-          <NavHashLink smooth to="#contact" onClick={closeMenu} className={activeNav === '#contact' ? 'active' : ''}>
+          <NavHashLink smooth to="#contact" onClick={() => handleNavClick('#contact')} className={activeNav === '#contact' ? 'active' : ''}>
             Contact
           </NavHashLink>
           <button className="resume-icon-btn" onClick={() => setShowResume(true)} aria-label="View Resume">
@@ -111,6 +124,15 @@ export function Header() {
               <path d="M16 13H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M16 17H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M10 9H9H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+          <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle theme">
+            <svg className="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="2" />
+              <path d="M12 1V3M12 21V23M23 12H21M3 12H1M20.49 20.49L19.07 19.07M4.93 4.93L3.51 3.51M20.49 3.51L19.07 4.93M4.93 19.07L3.51 20.49" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+            <svg className="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
         </nav>
