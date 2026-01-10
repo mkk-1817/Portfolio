@@ -24,3 +24,4 @@ yarn-error.log*
 
 .vercel
 yarn.lock
+GITHUB_README.md
